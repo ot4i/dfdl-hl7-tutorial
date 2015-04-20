@@ -27,7 +27,7 @@
            	"projects"	: "HL7-2.7",
        	        "editorResPaths": [
            				{
-       		        	        	"id" : "MainSchemaFile",
+       		        	        	"id" : "MainSchema",
        				                "editor" : "dfdl",
     			  	                "wspath" : "<workspace>/HL7-2.7/GenericHL7.xsd"
        			                }
