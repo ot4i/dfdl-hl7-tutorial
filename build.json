@@ -1,0 +1,10 @@
+{    
+    "main" : {
+      "project" : "HL7-2.7",
+      "artefact": "GenericHL7.xsd",
+      "editor"  : "dfdl"
+    },
+    "bar" : {
+        "build" : false
+    }
+  }
