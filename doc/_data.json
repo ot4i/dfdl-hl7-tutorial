@@ -295,7 +295,7 @@
               "section":"The shared library can be deployed to an integration node for use by message flows."
             }, 
             {
-              "section":"The IBM Integration Bus Healthcare Pack contains specific DFDL schemas for each HL7 message type, as well as prebuilt patterns and connections enabling rapid clinical application and device integration for connected healthcare systems."
+              "section":"The IBM Integration Bus Healthcare Pack contains a more comprehensive set of DFDL schemas for HL7, including definitions of all HL7 message types. It also contains prebuilt patterns and connections enabling rapid clinical application and device integration for connected healthcare systems."
             } 
           ]
         },
