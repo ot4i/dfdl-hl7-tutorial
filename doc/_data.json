@@ -77,7 +77,7 @@
             "section":"Segments contain fields separated by the field delimiter. A field can have components separated by the component delimiter, and a component can have sub-components separated by the sub-component delimiter. The default delimiters are pipe (|) for the field separator, caret (^) for the component separator, and ampersand (&) for the sub-component separator. The tilde (~) is the default repetition separator for fields that repeat. Each segment starts with a 3-character initiator which identifies the segment type. Fields, components and sub-components do not have initiators." 
           },
           {  
-            "section":"Every message starts with an MSH segment, which includes a field that identifies the message type. The message type determines the expected segment types in the message. The MSH also defines the delimiters that are used by the message. Each segment of the message contains one specific category of information. Healthcare organizations are able to extend the standard by providing their own segments with 3-character initiators starting with 'Z'."
+            "section":"Every message starts with a special MSH segment, which includes a field that identifies the message type. The message type determines the expected segment types in the message. The MSH also defines the delimiters that are used by the message. Each segment of the message contains one specific category of information. Healthcare organizations are able to extend the standard by providing their own segments with 3-character initiators starting with 'Z'."
           },
           {
             "section":"The DFDL schema editor is used to view the model and parse example HL7 message files."
@@ -122,7 +122,7 @@
               "section":"Click <span class='uicontrol'>Import</span> and a shared library is imported into your workspace."
             },
             {
-              "section":"Library <span class='library'>HL7-2.7</span> contains a set of DFDL schemas that model HL7 Version 2.7 messages in a generic manner."
+              "section":"Library <span class='library'>HL7-2.7</span> contains a set of DFDL schemas that model HL7 Version 2.7 messages."
             },
             {
               "section":"The <span class='filepath'>GenericHL7.xsd</span> schema models the overall HL7 message in a generic manner that allows it to parse all HL7 message types. Segments are defined in <span class='filepath'>segments.xsd</span> comprising fields, components and sub-components defined in <span class='filepath'>fields.xsd</span> and <span class='filepath'>datatypes.xsd</span>. Z segments may be added to <span class='filepath'>Z_Segments.xsd</span>. The <span class='filepath'>HL7Format.xsd</span> schema defines suitable default values for DFDL properties."
@@ -293,6 +293,9 @@
             },  
             {
               "section":"The shared library can be deployed to an integration node for use by message flows."
+            }, 
+            {
+              "section":"The IBM Integration Bus Healthcare Pack contains specific DFDL schemas for each HL7 message type, as well as prebuilt patterns and connections enabling rapid clinical application and device integration for connected healthcare systems."
             } 
           ]
         },
@@ -313,6 +316,12 @@
               "title":"GitHub link to ",
               "description":"DFDLSchemas HL7 repository",
               "link":"http://dfdlschemas.github.io/HL7-v2.7/",
+              "type":"web"
+            },
+            {
+              "title":"Product link to ",
+              "description":"IBM Integration Bus Healthcare Pack",
+              "link":"http://www-03.ibm.com/software/products/en/integration-bus-healthcare-pack",
               "type":"web"
             }
           ]
