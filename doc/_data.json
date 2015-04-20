@@ -71,10 +71,13 @@
             "section":"This tutorial demonstrates how to model HL7 data by using DFDL schema."
           },
           {
-            "section":"HL7 Version 2.x defines a series of electronic messages to support administrative, logistical, financial and clinical processes. Since 1987 the standard has been updated regularly, resulting in the latest version 2.7 which is backward compatible with earlier 2.x versions. HL7 Version 2 messages use a non-XML text syntax based on segments (usually separated by carriage-return) and one-character delimiters. Segments have fields separated by the field delimiter. A field can be simple or have components separated by the component delimiter, and components can themselves have sub-components separated by the sub-component delimiter. The default delimiters are pipe (|) for the field separator, caret (^) for the component separator, and ampersand (&) for the sub-component separator. The tilde (~) is the default repetition separator for fields that repeat. Each segment starts with a 3-character initiator which identifies the segment type. Fields, components and sub-components do not have initiators." 
+            "section":"HL7 Version 2.x defines a series of electronic messages to support clinical, administrative, logistical and financial processes. Since 1987 the standard has been updated regularly, resulting in the latest version 2.7 which is backward compatible with earlier 2.x versions. HL7 Version 2 messages use a non-XML text syntax based on segments (usually separated by carriage-return) and one-character delimiters."
+          },
+          {
+            "section":"Segments contain fields separated by the field delimiter. A field can have components separated by the component delimiter, and a component can have sub-components separated by the sub-component delimiter. The default delimiters are pipe (|) for the field separator, caret (^) for the component separator, and ampersand (&) for the sub-component separator. The tilde (~) is the default repetition separator for fields that repeat. Each segment starts with a 3-character initiator which identifies the segment type. Fields, components and sub-components do not have initiators." 
           },
           {  
-            "section":"Each segment of the message contains one specific category of information. Every message starts with an MSH segment, which includes a field that identifies the message type. The message type determines the expected segment types in the message. The MSH also defines the delimiters that are used by the message. Healthcare organizations are able to extend the standard by providing their own segments with 3-character initiators starting with 'Z'."
+            "section":"Every message starts with an MSH segment, which includes a field that identifies the message type. The message type determines the expected segment types in the message. The MSH also defines the delimiters that are used by the message. Each segment of the message contains one specific category of information. Healthcare organizations are able to extend the standard by providing their own segments with 3-character initiators starting with 'Z'."
           },
           {
             "section":"The DFDL schema editor is used to view the model and parse example HL7 message files."
@@ -119,10 +122,13 @@
               "section":"Click <span class='uicontrol'>Import</span> and a shared library is imported into your workspace."
             },
             {
-              "section":"Library <span class='library'>HL7-2.7</span> contains a set of DFDL schemas that model HL7 Version 2.7 messages in a generic manner. Test data files are included in the library."
+              "section":"Library <span class='library'>HL7-2.7</span> contains a set of DFDL schemas that model HL7 Version 2.7 messages in a generic manner."
             },
             {
               "section":"The <span class='filepath'>GenericHL7.xsd</span> schema models the overall HL7 message in a generic manner that allows it to parse all HL7 message types. Segments are defined in <span class='filepath'>segments.xsd</span> comprising fields, components and sub-components defined in <span class='filepath'>fields.xsd</span> and <span class='filepath'>datatypes.xsd</span>. Z segments may be added to <span class='filepath'>Z_Segments.xsd</span>. The <span class='filepath'>HL7Format.xsd</span> schema defines suitable default values for DFDL properties."
+            },
+            {
+              "section":"Test data files are included in the library."
             }
           ]
         },
@@ -180,13 +186,13 @@
               "section":"The <span class='filepath'>GenericHL7.xsd</span> schema opens in the DFDL editor. If it does not open, double-click the DFDL schema to open it in the editor." 
             },
             {
-              "section":"The HL7 message is highlighted and it models a HL7 message consisting of an MSH segment followed by any number of other HL7 segments or Z segments. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the HL7 message structure by expanding the elements." 
+              "section":"The HL7 message is highlighted and it models a HL7 message consisting of the MSH segment followed by any number of other HL7 segments or Z segments. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the HL7 message structure by expanding the elements." 
             },
             {
               "section":"The physical rendering of each logical component is described by the DFDL properties in the <span class='uicontrol'>Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png' alt='' /> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span class='filepath'>HL7Format.xsd</span> schema." 
             },
             {
-              "section":"Because the settings of delimiters in a HL7 message can vary, the DFDL property <span class='varname'>Separator</span> is set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in the MSH segment. You can see this if you expand the MSH element in the HL7 message and look at the definition of MSH.1.FieldSeparator. Hover over MSH.1.FieldSeparator, click on the yellow 'Go to' arrow that pops up, and then in the <span class='filepath'>segments.xsd</span>schema that opens click on the <span class='uicontrol'>Variables</span> tab next to <span class='uicontrol'>Representation Properties</span>. When you have finished close <span class='filepath'>segments.xsd</span>." 
+              "section":"Because the settings of delimiters in a HL7 message can vary, the DFDL property <span class='varname'>Separator</span> is set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in the MSH segment. You can see this if you expand the MSH element in the HL7 message and look at the definition of MSH.1.FieldSeparator. Hover over MSH.1.FieldSeparator, click on the yellow 'Go to' arrow that pops up, and then in the <span class='filepath'>segments.xsd</span> schema that opens click on the <span class='uicontrol'>Variables</span> tab next to <span class='uicontrol'>Representation Properties</span>. When you have finished close <span class='filepath'>segments.xsd</span>." 
             },
             {
               "section":"You will be test parsing example HL7 data by using the HL7 message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the <span class='uicontrol'>DFDL Test</span> perspective by clicking <span class='uicontrol'>Window &gt; Open Perspective</span> and then clicking <span class='uicontrol'>DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
@@ -214,7 +220,7 @@
           "_runComment":"The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
           "sections":[
             {
-              "section":"The <span class='filepath'>GenericHL7.xsd</span> DFDL schema is open in the DFDL editor. The Interchange message should be highlighted in green.",
+              "section":"The <span class='filepath'>GenericHL7.xsd</span> DFDL schema is open in the DFDL editor. The HL7 message should be highlighted in green.",
               "steps":{
                 "type":"ordered",
                 "details":[

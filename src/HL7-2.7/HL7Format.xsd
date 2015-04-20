@@ -10,7 +10,6 @@
 *
 * Health Level Seven International and IBM hereby grant permission, to those obtaining 
 * a copy of these materials, to use, copy and modify the materials solely for use with DFDL processors.
-* THESE MATERIALS ARE PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND.  
 *
 * Copyright © 1999-2011, Health Level Seven.
 *
@@ -20,6 +19,9 @@
 *
 * Version 1.0     HL7Format.xsd 
 * 
+* 
+* This DFDL schema is for use with the IIB v10 DFDL ISO8583 tutorial.
+*
 * This DFDL schema is one of a set of schemas that model HL7 v2.7.
 * It provides a set of DFDL property values and other DFDL constructs to 
 * assist in the creation of DFDL schemas that model HL7 V2.7 data. 
@@ -59,34 +61,24 @@
 
 			<!-- To handle alternative HL7 field separator, uncomment the second dfdl:format and comment the first dfdl:format -->	
 			<dfdl:defineFormat name="HL7Segment">
-				<dfdl:format separator="|" separatorPolicy="suppressedAtEndLax" separatorPosition="prefix" sequenceKind="ordered" />
-			    <!-- <dfdl:format separator="{$ibmhl7:FieldSep}" separatorPolicy="suppressedAtEndLax" separatorPosition="prefix" sequenceKind="ordered" /> -->
+			    <dfdl:format separator="{$ibmhl7:FieldSep}" separatorPolicy="suppressedAtEndLax" separatorPosition="prefix" sequenceKind="ordered" /> 
 			</dfdl:defineFormat>
 
 			<!-- To handle alternative HL7 component separator uncomment the second dfdl:format and comment the first dfdl:format -->	
 			<dfdl:defineFormat name="HL7Component">
-				<dfdl:format separator="^" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" />
-				<!-- <dfdl:format separator="{$ibmhl7:CompSep}" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" /> -->
+				<dfdl:format separator="{$ibmhl7:CompSep}" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" /> 
 			</dfdl:defineFormat>
 
 			<!-- To handle alternative HL7 sub-component separator uncomment the second dfdl:format and comment the first dfdl:format -->	
 			<dfdl:defineFormat name="HL7SubComponent">
-				<dfdl:format separator="&amp;" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" />
-				<!-- <dfdl:format separator="{$ibmhl7:SubCompSep}" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" /> -->
+				<dfdl:format separator="{$ibmhl7:SubCompSep}" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" />
 			</dfdl:defineFormat>
 
 			<!-- To handle alternative HL7 repeat separator uncomment the second dfdl:format and comment the first dfdl:format -->	
 			<dfdl:defineFormat name="HL7Repeat">
-				<dfdl:format separator="~" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" /> 
-				<!-- <dfdl:format separator="{$ibmhl7:RepeatSep}" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" /> -->
+				<dfdl:format separator="{$ibmhl7:RepeatSep}" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" />
 			</dfdl:defineFormat>
 			
-			<!-- To handle alternative HL7 escape character uncomment the second dfdl:format and comment the first dfdl:format -->	
-			<dfdl:defineFormat name="HL7EscapeCharacter">
-				<dfdl:format separator="\" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" />
-				<!-- <dfdl:format separator="{$ibmhl7:EscapeSep}" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" /> -->
-			</dfdl:defineFormat>
-
 		</xsd:appinfo>
 	</xsd:annotation>
 	
