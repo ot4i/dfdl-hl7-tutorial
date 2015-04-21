@@ -20,7 +20,7 @@
 * Version 1.0     HL7Format.xsd 
 * 
 * 
-* This DFDL schema is for use with the IIB v10 DFDL ISO8583 tutorial.
+* This DFDL schema is for use with the IIB v10 DFDL HL7 tutorial.
 *
 * This DFDL schema is one of a set of schemas that model HL7 v2.7.
 * It provides a set of DFDL property values and other DFDL constructs to 

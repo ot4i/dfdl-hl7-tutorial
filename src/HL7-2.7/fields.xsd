@@ -10,7 +10,6 @@
 *
 * Health Level Seven International and IBM hereby grant permission, to those obtaining 
 * a copy of these materials, to use, copy and modify the materials solely for use with DFDL processors.
-* THESE MATERIALS ARE PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND.  
 *
 * Copyright © 1999-2011, Health Level Seven.
 *
@@ -19,6 +18,8 @@
 ************************************************************************
 *
 * Version 1.0 	fields.xsd
+*
+* This DFDL schema is for use with the IIB v10 DFDL HL7 tutorial.
 *
 * This DFDL schema is one of a set of schemas that model HL7 v2.7.
 * It provides a set of DFDL-annotated elements for HL7 fields.   
