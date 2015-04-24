@@ -265,7 +265,7 @@
                           "details":"Click the <span class='uicontrol'>Test Serialize Model</span> button in the DFDL editor toolbar. The <span class='wintitle'>Test Serialize Model</span> window opens."
                         },
                         {
-                          "details":"In the Serializer Input section, select <span class='uicontrol'>Content from a DFDL Test - Logical Instance</span>."
+                          "details":"In the Serializer Input section, select <span class='uicontrol'>Content from 'DFDL Test - Logical Instance'</span>."
                         },
                         {
                           "details":"Set the Encoding to <span class='uicontrol'>ASCII</span>."
