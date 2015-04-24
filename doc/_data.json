@@ -31,7 +31,7 @@
   "tutorial":{
     "_common":{
       "name":"Modeling HL7 data by using DFDL",
-      "shortDescription":"Learn how to model HL7 data by using Data Format Description Language (DFDL).",
+      "shortDescription":"Learn how to model HL7 healthcare data by using Data Format Description Language (DFDL).",
       "durationText":"This tutorial takes approximately",
       "durationTime":"5 minutes",
       "_resourceToOpenComment":"The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
@@ -220,7 +220,7 @@
           "_runComment":"The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
           "sections":[
             {
-              "section":"The <span class='filepath'>GenericHL7.xsd</span> DFDL schema is open in the DFDL editor. The HL7 message should be highlighted in green.",
+              "section":"The <span class='filepath'>GenericHL7.xsd</span> DFDL schema is open in the DFDL editor. The HL7 message should be visible in the Messages section of the editor.",
               "steps":{
                 "type":"ordered",
                 "details":[
