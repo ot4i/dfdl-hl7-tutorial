@@ -1,0 +1,342 @@
+{
+  "version":"0.6",
+    "pageContent": 
+	{
+        "_comments": "JSON object that contains data for page labels, buttons, etc.",
+        "navItems": 
+		{
+            "_common": 
+			{
+                "buttonBackToGallery": 
+				{
+                    "name": "Back To Gallery",
+					"method": "backToGallery()",
+					"idName": "backToGallery"	
+                },
+                "buttonStartTutorial": 
+				{
+                    "name": "Start Tutorial",
+					"method": "startTutorialFromDetailsScreen()",
+					"idName": "startTutorial"
+                },
+	        "buttonViewDetails":
+                                {
+                    "name": "View Details",
+                                        "method": "viewDetails()",
+                                        "idName": "stepsViewDetails"	
+                }
+            }
+        }
+    },
+  "tutorial":{
+    "_common":{
+      "name":"Modeling HL7 data by using DFDL",
+      "shortDescription":"Learn how to model HL7 healthcare data by using Data Format Description Language (DFDL).",
+      "durationText":"This tutorial takes approximately",
+      "durationTime":"5 minutes",
+      "_resourceToOpenComment":"The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
+      "resourceToOpen":"MainSchema",
+      "helpLink": 
+	{
+           "text": "IBM Knowledge Center",
+           "link": "/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm"
+        }
+    },
+    "pageDetails":{
+      "topicsName":"Tutorial Topics",
+      "_topicListComment":"A short list of product concepts or tasks demonstrated by this tutorial",
+      "topicList":[
+        {
+          "title":"Modeling HL7 messages"
+        },
+        {
+          "title":"Editing DFDL schema"
+        },
+        {
+          "title":"Testing DFDL schema"
+        }
+      ],
+      "outcomesName":"Learning outcomes",
+      "_outcomesComment":"A description of what the user will have learned or accomplished by running this tutorial.",
+      "outcomeList":[
+        {
+          "title":"An understanding of how the DFDL editor can be used to model and parse HL7 data."
+        }
+      ],
+      "summary":{
+        "overviewName":"OVERVIEW",
+        "_overviewComment":"A short description of what happens in this tutorial, and an optional short explanation of the IIB concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
+        "sections":[
+          {
+            "section":"This tutorial demonstrates how to model HL7 data by using DFDL schema."
+          },
+          {
+            "section":"HL7 Version 2.x defines a series of electronic messages to support clinical, administrative, logistical and financial processes. Since 1987 the standard has been updated regularly, resulting in the latest version 2.7 which is backward compatible with earlier 2.x versions. HL7 Version 2 messages use a non-XML text syntax based on segments (usually separated by carriage-return) and one-character delimiters."
+          },
+          {
+            "section":"Segments contain fields separated by the field delimiter. A field can have components separated by the component delimiter, and a component can have sub-components separated by the sub-component delimiter. The default delimiters are pipe (|) for the field separator, caret (^) for the component separator, and ampersand (&) for the sub-component separator. The tilde (~) is the default repetition separator for fields that repeat. Each segment starts with a 3-character initiator which identifies the segment type. Fields, components and sub-components do not have initiators." 
+          },
+          {  
+            "section":"Every message starts with a special MSH segment, which includes a field that identifies the message type. The message type determines the expected segment types in the message. The MSH also defines the delimiters that are used by the message. Each segment of the message contains one specific category of information. Healthcare organizations are able to extend the standard by providing their own segments with 3-character initiators starting with 'Z'."
+          },
+          {
+            "section":"The DFDL schema editor is used to view the model and parse example HL7 message files."
+          }
+        ]
+        },
+      "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Message modeling overview",
+              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"How to model data with DFDL",
+              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"HL7 messaging standard",
+              "link":"com.ibm.etools.mft.doc/ad09565_.htm"
+            },
+            {
+              "title":"GitHub link to ",
+              "description":"DFDLSchemas HL7 repository",
+              "link":"http://dfdlschemas.github.io/HL7-v2.7/",
+              "type":"web"
+            }
+          ]
+      }
+    },
+    "pageSteps":{
+      "create":{
+        "overview":{
+          "name":"Create",
+          "heading":"Import projects",
+          "_createComment":"A description of what will happen when the user clicks Import.",
+          "sections":[
+            {
+              "section":"Click <span class='uicontrol'>Import</span> and a shared library is imported into your workspace."
+            },
+            {
+              "section":"Library <span class='library'>HL7-2.7</span> contains a set of DFDL schemas that model HL7 Version 2.7 messages."
+            },
+            {
+              "section":"The <span class='filepath'>GenericHL7.xsd</span> schema models the overall HL7 message in a generic manner that allows it to parse all HL7 message types. Segments are defined in <span class='filepath'>segments.xsd</span> comprising fields, components and sub-components defined in <span class='filepath'>fields.xsd</span> and <span class='filepath'>datatypes.xsd</span>. Z segments may be added to <span class='filepath'>Z_Segments.xsd</span>. The <span class='filepath'>HL7Format.xsd</span> schema defines suitable default values for DFDL properties."
+            },
+            {
+              "section":"Test data files are included in the library."
+            }
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Message modeling overview",
+              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"How to model data with DFDL",
+              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"HL7 messaging standard",
+              "link":"com.ibm.etools.mft.doc/ad09565_.htm"
+            },
+            {
+              "title":"GitHub link to ",
+              "description":"DFDLSchemas HL7 repository",
+              "link":"http://dfdlschemas.github.io/HL7-v2.7/",
+              "type":"web"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Working with DFDL schema files",
+              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+            }
+          ]
+        },
+       "actions":{
+          "title": "Create Actions",
+          "details":[
+             {
+               "name": "Import",
+               "method": "importArtifacts()"
+             }
+           ]
+         }
+      },
+      "prepare":{
+        "overview":{
+          "name":"Prepare",
+          "heading":"Exploring the schemas",
+          "_prepareComment":"A description of what just happened when the user clicked Import, and what will happen when the user clicks Deploy.",
+          "sections":[
+            {
+              "section":"The <span class='library'>HL7-2.7</span> library is shown in the <span class='uicontrol'>Application Development</span> view of your workspace."
+            },
+            {
+              "section":"The <span class='filepath'>GenericHL7.xsd</span> schema opens in the DFDL editor. If it does not open, double-click the DFDL schema to open it in the editor." 
+            },
+            {
+              "section":"The HL7 message is highlighted and it models a HL7 message consisting of the MSH segment followed by any number of other HL7 segments or Z segments. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the HL7 message structure by expanding the elements." 
+            },
+            {
+              "section":"The physical rendering of each logical component is described by the DFDL properties in the <span class='uicontrol'>Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png' alt='' /> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span class='filepath'>HL7Format.xsd</span> schema." 
+            },
+            {
+              "section":"Because the settings of delimiters in a HL7 message can vary, the DFDL property <span class='varname'>Separator</span> is set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in the MSH segment. You can see this if you expand the MSH element in the HL7 message and look at the definition of MSH.1.FieldSeparator. Hover over MSH.1.FieldSeparator, click on the yellow 'Go to' arrow that pops up, and then in the <span class='filepath'>segments.xsd</span> schema that opens click on the <span class='uicontrol'>Variables</span> tab next to <span class='uicontrol'>Representation Properties</span>. When you have finished close <span class='filepath'>segments.xsd</span>." 
+            },
+            {
+              "section":"You will be test parsing example HL7 data by using the HL7 message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the <span class='uicontrol'>DFDL Test</span> perspective by clicking <span class='uicontrol'>Window &gt; Open Perspective</span> and then clicking <span class='uicontrol'>DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
+            },
+            {
+              "section":"<b>Tip:</b> If this <span class='uicontrol'>Tutorial Steps View</span> tab disappears when you switch perspectives, use the <span class='uicontrol'>Window &gt; Show View</span> menu option to add it back."
+            }
+          ]  
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Working with DFDL schema files",
+              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+            }
+          ]
+        }
+      },
+      "run":{
+        "overview":{
+          "name":"Run",
+          "heading":"Follow these steps to complete the tutorial",
+          "_runComment":"The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
+          "sections":[
+            {
+              "section":"The <span class='filepath'>GenericHL7.xsd</span> DFDL schema is open in the DFDL editor. The HL7 message should be visible in the Messages section of the editor.",
+              "steps":{
+                "type":"ordered",
+                "details":[
+                  {
+                    "details":"Test parse an example data file:",
+                    "substeps":{
+                      "type":"ordered",
+                      "details":[
+                        {
+                          "details":"Click the <span class='uicontrol'>Test Parse Model</span> button in the DFDL editor toolbar. The <span class='wintitle'>Test Parse Model</span> window opens."
+                        },
+                        {
+                          "details":"In the Message section, select <span class='uicontrol'>HL7</span>."
+                        },
+                        {
+                          "details":"In the Parser Input section, select <span class='uicontrol'>Content from a data file</span> then click <span class='uicontrol'>Browse</span>."
+                        },
+                        {
+                          "details":"Select the <span class='filepath'>A01.txt</span> file from <span class='library'>HL7-2.7</span> then click <span class='uicontrol'>OK</span>."
+                        },
+                        {
+                          "details":"Set the Encoding to <span class='uicontrol'>ASCII</span>."
+                        },
+                        {
+                          "details":"Click <span class='uicontrol'>OK</span>. If asked to confirm switching to the <span class='uicontrol'>DFDL Test</span> perspective, click <span class='uicontrol'>Yes</span>."
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "details":"The results of the test parse are displayed. You should see the message <span class='systemoutput'>Parsing completed successfully</span>. You can dismiss this message."
+                  },
+                  {
+                    "details":"You can view the parsed data file in the <span class='uicontrol'>DFDL Test - Parse</span> view. The results of the parse can be viewed in the <span class='uicontrol'>DFDL Test - Logical Instance</span> view, as a tree or as XML. You can view a log of the parser actions in the <span class='uicontrol'>DFDL Test - Trace</span> view."
+                  },
+                  {
+                    "details":"Test serialize the logical instance that resulted from the parse:",
+                    "substeps":{
+                      "type":"ordered",
+                      "details":[
+                        {
+                          "details":"Click the <span class='uicontrol'>Test Serialize Model</span> button in the DFDL editor toolbar. The <span class='wintitle'>Test Serialize Model</span> window opens."
+                        },
+                        {
+                          "details":"In the Serializer Input section, select <span class='uicontrol'>Content from 'DFDL Test - Logical Instance'</span>."
+                        },
+                        {
+                          "details":"Set the Encoding to <span class='uicontrol'>ASCII</span>."
+                        },
+                        {
+                          "details":"Click <span class='uicontrol'>OK</span>."
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "details":"The results of the test serialize are displayed. You should see the message <span class='systemoutput'>Serialization completed successfully</span>. You can dismiss this message."
+                  },
+                  {
+                    "details":"You can view the serialized data file in the <span class='uicontrol'>DFDL Test - Serialize</span> view. You can view a log of the serializer actions in the <span class='uicontrol'>DFDL Test - Trace</span> view."
+                  },  
+                  {
+                    "details":"Repeat steps 1 through 6 for the <span class='filepath'>ORU.txt</span> example data file."
+                  },  
+                  {
+                    "details":"As an alternative to the toolbar buttons, you can also test from the <span class='uicontrol'>DFDL Test - Parse</span> and <span class='uicontrol'>DFDL Test - Serialize</span> views, using the <span class='uicontrol'>Browse</span> button to select a data source and the green play icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png' alt='' /> to run the DFDL parser or serializer."
+                  }  
+                ]
+              }
+            },  
+            {
+              "section":"The shared library can be deployed to an integration node for use by message flows."
+            }, 
+            {
+              "section":"The IBM Integration Bus Healthcare Pack contains a more comprehensive set of DFDL schemas for HL7, including definitions of all HL7 message types. It also contains prebuilt patterns and connections enabling rapid clinical application and device integration for connected healthcare systems."
+            } 
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Testing a DFDL schema file",
+              "link":"com.ibm.etools.mft.doc/df20065_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"HL7 messaging standard",
+              "link":"com.ibm.etools.mft.doc/ad09565_.htm"
+            },
+            {
+              "title":"GitHub link to ",
+              "description":"DFDLSchemas HL7 repository",
+              "link":"http://dfdlschemas.github.io/HL7-v2.7/",
+              "type":"web"
+            },
+            {
+              "title":"Product link to ",
+              "description":"IBM Integration Bus Healthcare Pack",
+              "link":"http://www-03.ibm.com/software/products/en/integration-bus-healthcare-pack",
+              "type":"web"
+            }
+          ]
+        },
+        "exits":{
+	  "title": "Run Exits",
+	  "details":[
+	     {
+	     	"name": "Clean Up",
+	     	"description": "Clean up and remove any changes in your workspace made by the tutorial.",
+	     	"method": "cleanUp()"
+	     }
+	   ]
+	 }
+      }
+    }
+  }
+}
