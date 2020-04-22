@@ -39,7 +39,8 @@
       "helpLink": 
 	{
            "text": "IBM Knowledge Center",
-           "link": "/com.ibm.ace.home.doc/help_home.htm"
+           "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.html",
+           "type":"web"		
         }
     },
     "pageDetails":{
@@ -90,17 +91,21 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Message modeling overview",
-              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bd40430_.htm",
+              "type":"web"					
             },
             {
               "title":"Knowledge Center link to ",
               "description":"How to model data with DFDL",
-              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20125_.htm",
+              "type":"web"					
+				
             },
             {
               "title":"Knowledge Center link to ",
               "description":"HL7 messaging standard",
-              "link":"com.ibm.etools.mft.doc/ad09565_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad09565_.htm",
+              "type":"web"				
             },
             {
               "title":"GitHub link to ",
@@ -138,17 +143,20 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Message modeling overview",
-              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bd40430_.htm",
+              "type":"web"					
             },
             {
               "title":"Knowledge Center link to ",
               "description":"How to model data with DFDL",
-              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20125_.htm",
+              "type":"web"					
             },
             {
               "title":"Knowledge Center link to ",
               "description":"HL7 messaging standard",
-              "link":"com.ibm.etools.mft.doc/ad09565_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad09565_.htm",
+              "type":"web"	
             },
             {
               "title":"GitHub link to ",
@@ -159,7 +167,8 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Working with DFDL schema files",
-              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm",
+              "type":"web"
             }
           ]
         },
@@ -208,7 +217,8 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Working with DFDL schema files",
-              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm",
+              "type":"web"									
             }
           ]
         }
@@ -295,7 +305,7 @@
               "section":"The shared library can be deployed to an integration node for use by message flows."
             }, 
             {
-              "section":"The IBM Integration Bus Healthcare Pack contains a more comprehensive set of DFDL schemas for HL7, including definitions of all HL7 message types. It also contains prebuilt patterns and connections enabling rapid clinical application and device integration for connected healthcare systems."
+              "section":"IBM App Connect for Healthcare contains a more comprehensive set of DFDL schemas for HL7, including definitions of all HL7 message types. It also contains prebuilt patterns and connections enabling rapid clinical application and device integration for connected healthcare systems."
             } 
           ]
         },
@@ -305,12 +315,14 @@
             {
               "title":"Knowledge Center link to ",
               "description":"Testing a DFDL schema file",
-              "link":"com.ibm.etools.mft.doc/df20065_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20065_.htm",
+              "type":"web"					
             },
             {
               "title":"Knowledge Center link to ",
               "description":"HL7 messaging standard",
-              "link":"com.ibm.etools.mft.doc/ad09565_.htm"
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad09565_.htm",
+              "type":"web"									
             },
             {
               "title":"GitHub link to ",
@@ -320,8 +332,8 @@
             },
             {
               "title":"Product link to ",
-              "description":"IBM Integration Bus Healthcare Pack",
-              "link":"http://www-03.ibm.com/software/products/en/integration-bus-healthcare-pack",
+              "description":"IBM App Connect for Healthcare",
+              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.healthcare.doc/ha00000.html",
               "type":"web"
             }
           ]
